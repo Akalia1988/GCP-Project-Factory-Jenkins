@@ -5,8 +5,8 @@ pipeline {
         string(name: 'PROJECT_NAME', defaultValue: 'gcp-jenkins-test', description: 'Name of GCP Project')
         string(name: 'ORG_ID', defaultValue: 'organization/123456', description: 'Organization ID')
         string(name: 'BILLING_ACCOUNT', defaultValue: 'xxxxx', description: 'Billing account')
-        string(name: 'BILL_TO_LABEL_VALUE', defaultValue: 'dshare', description: 'Label for whom project is getting billed to.')
-        string(name: 'COST_CENTER_LABEL_VALUE', defaultValue: 'f5020', description: 'Label for cost center.')
+        string(name: 'BILL_TO_LABEL_VALUE', defaultValue: 'xxx', description: 'Label for whom project is getting billed to.')
+        string(name: 'COST_CENTER_LABEL_VALUE', defaultValue: 'xxxx', description: 'Label for cost center.')
         string(name: 'BUSINESS_OWNER_LABEL_VALUE', defaultValue: 'it-cloud-management', description: 'Label for Business Owner')
         string(name: 'PRODUCT_OWNER_LABEL_VALUE', defaultValue: 'it-cloud-management', description: 'Label for Product Owner')
         string(name: 'OPERATIONS_OWNER_LABEL_VALUE', defaultValue: 'it-cloud-management', description: 'Label for Operations Owner')
@@ -41,7 +41,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'harbor.prod.corp.xxxxxx.net/library/xxxxx/githubcli:latest'
+                    image 'prod.corp.xxxxxx.net/library/xxxxx/githubcli:latest'
                     args '-u root:root'
                 }
             }
